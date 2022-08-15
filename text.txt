@@ -1,0 +1,18 @@
+[10:12 PM] Kirwa, Annalis
+https://www.goavega.com/install-apache-kafka-on-windows/
+
+
+
+Edit zookeeper properties
+Start zookeeper
+zookeeper-server-start.bat zookeeper.properties
+
+Edit server properties
+Start kafka
+kafka-server-start.bat server.properties
+
+
+Start the kafka console
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic myTopic
+
+Fire the requests on postman
