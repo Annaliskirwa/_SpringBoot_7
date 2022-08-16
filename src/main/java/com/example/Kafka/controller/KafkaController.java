@@ -2,6 +2,7 @@ package com.example.Kafka.controller;
 
 import com.example.Kafka.model.KafkaModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,5 +22,10 @@ public class KafkaController {
         kafkaTemplate.send("myTopic", kafkaModel);
         return kafkaModel;
 //        This kafka model is returned in the kafka consumer console
+    }
+
+    @KafkaListener(topics="myTopic")
+    public void getFromKafka(KafkaModel kafkaModel){
+        System.out.println(kafkaModel.toString());
     }
 }
