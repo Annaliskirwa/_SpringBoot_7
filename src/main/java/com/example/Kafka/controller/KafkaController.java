@@ -1,6 +1,7 @@
 package com.example.Kafka.controller;
 
 import com.example.Kafka.model.KafkaModel;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/kafka")
 public class KafkaController {
@@ -26,6 +28,8 @@ public class KafkaController {
 
     @KafkaListener(topics="myTopic")
     public void getFromKafka(KafkaModel kafkaModel){
-        System.out.println(kafkaModel.toString());
+//        System.out.println(kafkaModel.toString());
+        log.info("*********Get From Kafka**************");
+        log.info(kafkaModel.getField1() + kafkaModel.getField2());
     }
 }
