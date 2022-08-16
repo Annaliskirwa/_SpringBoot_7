@@ -16,3 +16,6 @@ Start the kafka console
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic myTopic
 
 Fire the requests on postman
+
+***Configure different topics inachapa
+Restart the zookeeper and kafka and configure console for topic 2
