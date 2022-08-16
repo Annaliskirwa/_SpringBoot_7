@@ -17,7 +17,9 @@ public class KafkaController {
         this.kafkaTemplate = kafkaTemplate;
     }
     @PostMapping
-    public void post(@RequestBody KafkaModel kafkaModel){
+    public KafkaModel post(@RequestBody KafkaModel kafkaModel){
         kafkaTemplate.send("myTopic", kafkaModel);
+        return kafkaModel;
+//        This kafka model is returned in the kafka consumer console
     }
 }
