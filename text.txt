@@ -19,3 +19,26 @@ Fire the requests on postman
 
 ***Configure different topics inachapa
 Restart the zookeeper and kafka and configure console for topic 2
+
+************************************
+Okay so now acha tu revise
+Kafka: distributed publish-subscribe messaging system(speed, scalabilty and durability)
+
+Producer: the application that sends the message(an array of data)
+
+Consumer: the application that receives the message sent by the producer.
+
+Kafka Broker: Kafka Server; producer and consumer use it as an agent to send and receive messages.
+
+Cluster: A group of computers @ executing one instance on a kafka broker.
+
+Topic: The name for the data stream. Producer sends/ Consumer receives messages from a particular data stream.
+
+Partition: Breaking down data in each topic and distributing them across different brokers across the clusters.
+
+Offset: A sequence number assigned to each message arriving into the kafka server.
+
+Consumer groups: A group of consumers acting as a single unit. 
+##Partitioning and consumer groups are used for scaling an application.
+
+
