@@ -45,7 +45,7 @@ private Gson jsonConverter;
         return kafkaModel2;
     }
 
-    @KafkaListener(topics = "myTopic2")
+    @KafkaListener(topics = "myTopic2", groupId = "myGroupId")
     public void getFromKafka2(String kafkaModel2){
         log.info("*********Get From Kafka 2**************");
         log.info(kafkaModel2);

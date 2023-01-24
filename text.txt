@@ -45,3 +45,9 @@ Kafka architecture: https://miro.medium.com/max/1100/1*W9liL19cKq11oARLZe6-QQ.we
 
 
 Kafka and zookeeper: store logs. Kafka uses zookeeper to manage clusters.
+
+
+
+One last one-------------
+Dont forget to set listeners like this in the server properties file:
+listeners=PLAINTEXT://127.0.0.1:9092
