@@ -41,6 +41,7 @@ Offset: A sequence number assigned to each message arriving into the kafka serve
 Consumer groups: A group of consumers acting as a single unit. 
 ##Partitioning and consumer groups are used for scaling an application.
 
-https://miro.medium.com/max/1100/1*W9liL19cKq11oARLZe6-QQ.webp
+Kafka architecture: https://miro.medium.com/max/1100/1*W9liL19cKq11oARLZe6-QQ.webp
 
 
+Kafka and zookeeper: store logs. Kafka uses zookeeper to manage clusters.
